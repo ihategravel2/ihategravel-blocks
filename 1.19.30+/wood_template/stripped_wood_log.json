@@ -1,0 +1,83 @@
+{
+	"format_version": "1.19.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ihg:stripped_wood_log",
+			"menu_category": {
+				"creative_group": "ihg:wood_group",
+				"category": "construction",
+				"is_hidden_in_commands": false
+			},
+			"properties": {
+				"ihg:block_rotation": [
+					0,
+					1,
+					2
+				]
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "ihg:stripped_wood_log",
+					"render_method": "opaque"
+				},
+				"up": {
+					"texture": "ihg:stripped_wood_log_top",
+					"render_method": "opaque"
+				},
+				"down": {
+					"texture": "ihg:stripped_wood_log_top",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:flammable": true,
+			"minecraft:map_color": "#9f3300",
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:destructible_by_mining": true,
+			"minecraft:on_player_placing": {
+				"event": "ihg:update_rotation"
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('ihg:block_rotation') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('ihg:block_rotation') == 1",
+				"components": {
+					"minecraft:rotation": [
+						90,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('ihg:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						-90
+					]
+				}
+			}
+		],
+		"events": {
+			"ihg:update_rotation": {
+				"set_block_property": {
+					"ihg:block_rotation": "math.floor(query.block_face/2)"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,125 @@
+{
+	"format_version": "1.19.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ihg:wood_log",
+			"menu_category": {
+				"creative_group": "ihg:wood_group",
+				"category": "construction",
+				"is_hidden_in_commands": false
+			},
+			"properties": {
+				"ihg:block_rotation": [
+					0,
+					1,
+					2
+				]
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "ihg:wood_log_side",
+					"render_method": "opaque"
+				},
+				"up": {
+					"texture": "ihg:wood_log_top",
+					"render_method": "opaque"
+				},
+				"down": {
+					"texture": "ihg:wood_log_top",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:flammable": true,
+			"minecraft:map_color": "#8d2b00",
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:destructible_by_mining": true,
+			"minecraft:on_interact": {
+				"condition": "query.equipped_item_all_tags('slot.weapon.mainhand','minecraft:is_axe')",
+				"event": "strip_log"
+			},
+			"minecraft:on_player_placing": {
+				"event": "ihg:update_rotation"
+			}
+		},
+		"events": {
+			"strip_log": {
+				"sequence": [
+					{
+						"condition": "query.block_property('ihg:block_rotation')==0",
+						"set_block": {
+							"block_type": "ihg:stripped_wood_log"
+						}
+					},
+					{
+						"condition": "query.block_property('ihg:block_rotation')==1",
+						"run_command": {
+							"command": [
+								"setblock ~ ~ ~ ihg:stripped_wood_log[\"ihg:block_rotation\":1]"
+							]
+						}
+					},
+					{
+						"condition": "query.block_property('ihg:block_rotation')==2",
+						"run_command": {
+							"command": [
+								"setblock ~ ~ ~ ihg:stripped_wood_log[\"ihg:block_rotation\":2]"
+							]
+						}
+					},
+					{
+						"damage": {
+							"type": "durability",
+							"amount": 1,
+							"target": "item"
+						},
+						"run_command": {
+							"command": [
+								"playsound hit.wood @a ~ ~ ~"
+							]
+						}
+					}
+				]
+			},
+			"ihg:update_rotation": {
+				"set_block_property": {
+					"ihg:block_rotation": "math.floor(query.block_face/2)"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('ihg:block_rotation') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('ihg:block_rotation') == 1",
+				"components": {
+					"minecraft:rotation": [
+						90,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('ihg:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						-90
+					]
+				}
+			}
+		]
+	}
+}
