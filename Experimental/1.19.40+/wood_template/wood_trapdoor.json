@@ -1,0 +1,221 @@
+{
+	"format_version": "1.19.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ihg:wood_trapdoor",
+			"menu_category": {
+				"creative_group": "ihg:wood_group",
+				"category": "construction",
+				"is_hidden_in_commands": false
+			},
+			"properties": {
+				"ihg:placed_state": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7
+				],
+				"ihg:open": [
+					false,
+					true
+				],
+				"ihg:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.trapdoor",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "ihg:wood_trapdoor",
+					"render_method": "opaque",
+					"ambient_occlusion": false
+				}
+			},
+			"minecraft:flammable": true,
+			"minecraft:map_color": "#FFFFFF",
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:destructible_by_mining": true,
+			"minecraft:part_visibility": {
+				"conditions": {
+					"trapdoor_bottom": "query.block_property('ihg:placed_state') == 2 && !query.block_property('ihg:open') || query.block_property('ihg:placed_state') == 0",
+					"trapdoor_side": "query.block_property('ihg:open')",
+					"trapdoor_top": "query.block_property('ihg:placed_state') > 2 && !query.block_property('ihg:open') || query.block_property('ihg:placed_state') == 1 && !query.block_property('ihg:open')"
+				}
+			},
+			"minecraft:on_interact": {
+				"event": "event_interact"
+			},
+			"minecraft:on_player_placing": {
+				"event": "event_placed"
+			},
+			"minecraft:collision_box": {
+				"size": [
+					16,
+					3,
+					16
+				],
+				"orgin": [
+					-8,
+					0,
+					-8
+				]
+			},
+			"minecraft:selection_box": {
+				"size": [
+					16,
+					3,
+					16
+				],
+				"orgin": [
+					-8,
+					0,
+					-8
+				]
+			},
+			"minecraft:block_light_filter": 0,
+			"minecraft:breathability": "air" //Component functionality removed in 1.19.50.21, Should not trigger a content log error.
+		},
+		"events": {
+			"event_placed": {
+				"set_block_property": {
+					"ihg:placed_state": "query.block_face+1",
+					"ihg:block_rotation": "query.cardinal_facing_2d"
+				}
+			},
+			"event_interact": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"ihg:open": "query.block_property('ihg:open') ? false : true"
+						}
+					},
+					{
+						"condition": "query.block_property('ihg:open')",
+						"run_command": {
+							"command": [
+								"playsound random.door_close @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"condition": "!query.block_property('ihg:open')",
+						"run_command": {
+							"command": [
+								"playsound random.door_open @a ~ ~ ~"
+							]
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('ihg:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('ihg:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('ihg:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('ihg:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('ihg:open')",
+				"components": {
+					"minecraft:selection_box": {
+						"size": [
+							16,
+							16,
+							3
+						],
+						"origin": [
+							-8,
+							0,
+							5
+						]
+					},
+					"minecraft:collision_box": {
+						"size": [
+							16,
+							16,
+							3
+						],
+						"origin": [
+							-8,
+							0,
+							5
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('ihg:placed_state') == 1 && !query.block_property('ihg:open') || query.block_property('ihg:placed_state') > 2 && !query.block_property('ihg:open')",
+				"components": {
+					"minecraft:selection_box": {
+						"size": [
+							16,
+							3,
+							16
+						],
+						"origin": [
+							-8,
+							13,
+							-8
+						]
+					},
+					"minecraft:collision_box": {
+						"size": [
+							16,
+							3,
+							16
+						],
+						"origin": [
+							-8,
+							13,
+							-8
+						]
+					}
+				}
+			}
+		]
+	}
+}
