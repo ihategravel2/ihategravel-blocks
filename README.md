@@ -1,9 +1,6 @@
 # ihategravel's Blocks
 
-A collection of example blocks you can use for your own addons!
-
-
-
+A collection of example blocks you can use for your own addons! Included in this repository is blocks made for current and future versions of Minecraft. Blocks will be updated to work with higher format versions as they come or even remade if a update brings a better way to do those block behaviors. 
 
 # Are you allowed to use these blocks?
 Simple answer, yes. As long as you attribute this repository on any Add-On websites such as mcpedl.com your welcome to use these blocks in anyway you like. What is NOT allowed is failing to attribute this repository or claiming that you are the owner/creator of such blocks.  
