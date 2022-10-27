@@ -1,5 +1,5 @@
 {
-	"format_version": "1.19.30",
+	"format_version": "1.19.40",
 	"minecraft:block": {
 		"description": {
 			"identifier": "ihg:wood_trapdoor",
@@ -81,8 +81,10 @@
 					-8
 				]
 			},
-			"minecraft:block_light_filter": 0,
-			"minecraft:breathability": "air" //Component functionality removed in 1.19.50.21, Should not trigger a content log error.
+			"minecraft:light_dampening": 0,
+			"minecraft:breathability": "air",
+			"minecraft:friction": 0.4,
+			"tag:wood": {}
 		},
 		"events": {
 			"event_placed": {

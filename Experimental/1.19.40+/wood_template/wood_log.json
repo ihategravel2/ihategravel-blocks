@@ -40,6 +40,8 @@
 				"condition": "query.equipped_item_all_tags('slot.weapon.mainhand','minecraft:is_axe')",
 				"event": "strip_log"
 			},
+			"minecraft:friction": 0.4,
+			"tag:wood": {},
 			"minecraft:on_player_placing": {
 				"event": "ihg:update_rotation"
 			}

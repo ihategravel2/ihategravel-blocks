@@ -1,0 +1,29 @@
+{
+	"format_version": "1.19.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ihg:custom_geometry_block",
+			"menu_category": {
+				"creative_group": "ihg:simple_blocks",
+				"category": "construction",
+				"is_hidden_in_commands": false
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.custom_geometry",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "ihg:custom_texture",
+					"render_method": "opaque",
+					"ambient_occlusion": true,
+					"face_dimming": true
+				}
+			},
+			"minecraft:friction": 0.4,
+			"minecraft:map_color": "#FFFFFF",
+			"minecraft:flammable": false,
+			"minecraft:destructible_by_mining": true,
+			"minecraft:destructible_by_explosion": true
+		}
+	}
+}
