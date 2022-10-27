@@ -1,15 +1,18 @@
-# ihategravel-blocks
+# ihategravel's Blocks
 
 A collection of example blocks you can use for your own addons!
 
-# Credit
-If you use any of these example blocks credit and/or link to this github repository would be appriecated. 
+
+
+
+# Are you allowed to use these blocks?
+Simple answer, yes. As long as you attribute this repository on any Add-On websites such as mcpedl.com your welcome to use these blocks in anyway you like. What is NOT allowed is failing to attribute this repository or claiming that you are the owner/creator of such blocks.  
 
 
 # Contributing
 If you wish to contribute feel freee to create a pull request.
 
-## Standards
+## Contribution Standards
 All blocks must have the following components:
 1. "minecraft:map_color"
 2. "minecraft:friction" (Friction set to the default of 0.4 unless otherwise)
