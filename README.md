@@ -10,9 +10,15 @@ Simple answer, yes. As long as you attribute this repository on any Add-On websi
 
 
 # Contributing
-If you wish to contribute feel freee to create a pull request.
+All forms of contribution are welcome including feedback, issues and pull requests. For a pull request to be accepted it must meet the following standars outlined below.
 
 ## Contribution Standards
+
+1. ALL blocks must meet a certain quality standard. Quality is determined by code "cleaness", models, and additional files that may relate to such block.
+2. Blocks CANNOT be obfuscated in anyway.
+3. ALL related files (models, funtions, etc) must be included.
+4. ALL blocks must be completley functional and any issues outlines extensively in the pull request.
+
 All blocks must have the following components:
 1. "minecraft:map_color"
 2. "minecraft:friction" (Friction set to the default of 0.4 unless otherwise)
@@ -20,3 +26,5 @@ All blocks must have the following components:
 4. "minecraft:destructible_by_explosion" (Set to a default value of true unless otherwise applicable)
 5. "minecraft:destructible_by_mining" (Set to a default value of true unless otherwise applicable)
 6. "minecraft:breathability" Format Versions 1.16.100-1.19.40
+
+
