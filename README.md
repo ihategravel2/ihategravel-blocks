@@ -17,7 +17,7 @@ All forms of contribution are welcome including feedback, issues and pull reques
 4. ALL blocks must be completley functional and any issues outlines extensively in the pull request.
 
 All blocks must have the following components:
-1. "minecraft:map_color"
+1. "minecraft:map_color" (Set to the most prominant color used in the top texture)
 2. "minecraft:friction" (Friction set to the default of 0.4 unless otherwise)
 3. "minecraft:flammable" (Set to a default value of true unless otherwise applicable)
 4. "minecraft:destructible_by_explosion" (Set to a default value of true unless otherwise applicable)
