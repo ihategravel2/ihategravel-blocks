@@ -24,7 +24,7 @@ All blocks must have the following components:
 5. "minecraft:destructible_by_mining" (Set to a default value of true unless otherwise applicable)
 6. "minecraft:breathability" Format Versions 1.16.100-1.19.40
 
-# Case by Case Basis Situations:
+## Case by Case Basis Situations:
 
 Gametest - This repository is focused on creating all behaviors within the block file itself. Not all block behaviors an be perfectly replicated within the confines of a block file and Gametest can be very useful for such situations. If your block requires Gametest a decision will be made based on the situation and context.
 
