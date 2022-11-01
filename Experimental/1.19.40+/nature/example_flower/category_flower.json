@@ -1,0 +1,55 @@
+{
+	"format_version": "1.19.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ihg:category_flower"
+		},
+		"components": {
+			"minecraft:geometry": "geometry.category_flower",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "ihg:category_flower",
+					"render_method": "alpha_test",
+					"face_dimming": false
+				}
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:collision_box": false,
+			"minecraft:selection_box": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					11,
+					16,
+					12
+				]
+			},
+			"minecraft:loot": "loot_tables/category_flower.json",
+			"minecraft:map_color": "#4ac248",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up",
+							"side"
+						],
+						"block_filter": [
+							"grass",
+							"dirt",
+							"mycelium",
+							"podzol",
+							"dirt_with_roots"
+						]
+					}
+				]
+			},
+			"minecraft:destructible_by_mining": true,
+			"minecraft:flammable": true,
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:friction": 0.4
+		}
+	}
+}
