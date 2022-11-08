@@ -4,7 +4,7 @@
 		"description": {
 			"identifier": "ihg:custom_geometry_block_with_collision",
 			"menu_category": {
-				"creative_group": "ihg:simple_blocks",
+				"group": "ihg:simple_blocks",
 				"category": "construction",
 				"is_hidden_in_commands": false
 			}

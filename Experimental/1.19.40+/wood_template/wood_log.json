@@ -4,7 +4,7 @@
 		"description": {
 			"identifier": "ihg:wood_log",
 			"menu_category": {
-				"creative_group": "ihg:wood_group",
+				"group": "ihg:wood_group",
 				"category": "construction",
 				"is_hidden_in_commands": false
 			},

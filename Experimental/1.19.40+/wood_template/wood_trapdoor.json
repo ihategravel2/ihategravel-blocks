@@ -4,7 +4,7 @@
 		"description": {
 			"identifier": "ihg:wood_trapdoor",
 			"menu_category": {
-				"creative_group": "ihg:wood_group",
+				"group": "ihg:wood_group",
 				"category": "construction",
 				"is_hidden_in_commands": false
 			},
@@ -41,7 +41,7 @@
 				}
 			},
 			"minecraft:flammable": true,
-			"minecraft:map_color": "#FFFFFF",
+			"minecraft:map_color": "#430c00",
 			"minecraft:destructible_by_explosion": true,
 			"minecraft:destructible_by_mining": true,
 			"minecraft:part_visibility": {
