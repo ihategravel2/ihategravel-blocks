@@ -5,6 +5,8 @@ A collection of example blocks you can use for your own addons! Included in this
 # Are you allowed to use these blocks?
 Simple answer, yes. As long as you attribute this repository on any Add-On websites such as mcpedl.com your welcome to use these blocks in anyway you like. What is NOT allowed is failing to attribute this repository or claiming that you are the owner/creator of such blocks.  
 
+# Marketplace Use?
+Yes, you are allowed to use these on the marketplace. You can't really give credit but if you tell me I'll check it out!
 
 # Contributing
 All forms of contribution are welcome including feedback, issues and pull requests. For a pull request to be accepted it must meet the following standars outlined below.
