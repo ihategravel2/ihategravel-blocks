@@ -35,18 +35,6 @@
 					0,
 					-8
 				]
-			},
-			"minecraft:selection_box": {
-				"size": [
-					16,
-					4,
-					15
-				],
-				"origin": [
-					-8,
-					0,
-					-8
-				]
 			}
 		}
 	}
