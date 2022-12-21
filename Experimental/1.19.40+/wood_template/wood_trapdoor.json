@@ -37,7 +37,8 @@
 				"*": {
 					"texture": "ihg:wood_trapdoor",
 					"render_method": "opaque",
-					"ambient_occlusion": false
+					"ambient_occlusion": true,
+					"face_dimming": true
 				}
 			},
 			"minecraft:flammable": true,
