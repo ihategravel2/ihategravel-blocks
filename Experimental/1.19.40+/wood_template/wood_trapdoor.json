@@ -1,5 +1,5 @@
 {
-	"format_version": "1.19.40",
+	"format_version": "1.19.50",
 	"minecraft:block": {
 		"description": {
 			"identifier": "ihg:wood_trapdoor",
